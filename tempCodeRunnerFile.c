@@ -1,20 +1,10 @@
-#include<stdio.h>
-int main()
-{
-      int n;
-      scanf("%d", n);
-      int a[n];
-      
-      for (int i = 0; i < n; i++)
-      {
-        scanf("%d", &a[i]);
-        // printf("%d")
-      }
-      for (int i = n-1; i>=1; i--)
-      {
-        printf("%d ", a[i]);
-      }
-      
-      
-    return 0;
-}
+for (int i = length+1; i >0; i--)
+// {
+//     s[length+i]=s[length];
+// }
+// printf(" new s %s", s);
+
+// for (int i = 0; i < length+1; i++)
+// {
+//     s[i]=s[length+1]
+// }
