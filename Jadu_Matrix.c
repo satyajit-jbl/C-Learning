@@ -1,0 +1,82 @@
+#include <stdio.h>
+
+int main()
+{
+    int n, m;
+    scanf("%d %d", &n, &m);
+
+    int a[n][m];
+
+    
+    for (int i = 0; i < n; i++)
+    {
+        for (int j = 0; j < m; j++)
+        {
+            scanf("%d", &a[i][j]);
+        }
+    }
+
+    
+    if (n != m)
+    {
+        printf("NO\n");
+        return 0;
+    }
+
+    int isJadu = 1;
+
+    
+    for (int i = 0; i < n; i++)
+    {
+        if (a[i][i] != 1)
+        {
+            isJadu = 0;
+        }
+    }
+
+    
+    for (int i = 0; i < n; i++)
+    {
+        int j = n - 1 - i;
+
+        if (a[i][j] != 1)
+        {
+            isJadu = 0;
+        }
+    }
+
+    
+    for (int i = 0; i < n; i++)
+    {
+        for (int j = 0; j < n; j++)
+        {
+            
+            if (i == j)
+            {
+                continue;
+            }
+
+            if (i + j == n - 1)
+            {
+                continue;
+            }
+
+            
+            if (a[i][j] != 0)
+            {
+                isJadu = 0;
+            }
+        }
+    }
+        
+    if (isJadu == 1)
+    {
+        printf("YES\n");
+    }
+    else
+    {
+        printf("NO\n");
+    }
+
+    return 0;
+}

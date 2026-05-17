@@ -1,10 +1,26 @@
-for (int i = length+1; i >0; i--)
-// {
-//     s[length+i]=s[length];
-// }
-// printf(" new s %s", s);
-
-// for (int i = 0; i < length+1; i++)
-// {
-//     s[i]=s[length+1]
-// }
+#include <stdio.h>
+void fun(int m)
+{
+    if (m > 0)
+    {
+        int digit = 0;
+        digit = m % 10;
+        fun(m / 10);
+        printf("%d ", digit);
+    }
+    
+}
+int main()
+{
+    int n;
+    scanf("%d", &n);
+    for (int i = 1; i <= n; i++)
+    {
+        int number;
+        scanf("%d", &number);
+        fun(number);
+        printf("\n");
+    }
+    
+    return 0;
+}
